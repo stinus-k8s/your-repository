@@ -16,7 +16,7 @@ def get_db_connection():
 def welcome():
     return 'Welcome1'
 
-@app.route('/how-are-you')  # Updated route
+@app.route('/how-are-you')
 def how_are_you():
     return 'I am good, how about you?'
 
@@ -25,9 +25,9 @@ def read_from_database():
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('SELECT name FROM employees')
-    result = cursor.fetchall()  # Fetch all results, not just one
+    result = cursor.fetchall()
     conn.close()
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8081)  # Updated to listen on port 8080
+    app.run(host='0.0.0.0', port=8081)

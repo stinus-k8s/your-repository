@@ -14,7 +14,7 @@ def get_db_connection():
 
 @app.route('/')
 def welcome():
-    return 'Welcome4'
+    return 'Welcome1'
 
 @app.route('/how-are-you')  # Updated route
 def how_are_you():
@@ -30,4 +30,4 @@ def read_from_database():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)  # Updated to listen on port 8080
+    app.run(host='0.0.0.0', port=8081)  # Updated to listen on port 8080

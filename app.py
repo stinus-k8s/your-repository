@@ -14,7 +14,7 @@ def get_db_connection():
 
 @app.route('/')
 def welcome():
-    return 'Welcome1'
+    return 'Welcome2'
 
 @app.route('/how-are-you')  # Updated route
 def how_are_you():
